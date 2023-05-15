@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/editRecipe"
+        android:title="Edit Recipe"
+        android:icon="@drawable/ic_edit_new_recipe"
+        />
+    <item
+        android:id="@+id/deleteRecipe"
+        android:title="Delete Recipe"
+        android:icon="@drawable/ic_delete_new_recipe"
+        />
+    <item
+        android:id="@+id/warningSign"
+        android:title="WarningTitle"
+        android:icon="@drawable/ic_warning_sign"
+        />
+</menu>

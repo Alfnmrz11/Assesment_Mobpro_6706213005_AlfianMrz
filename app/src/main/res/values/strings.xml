@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Delivery Food</string>
+    <string name="app_name">Recipes Food</string>
 
     <!-- Alert -->
     <string name="connection_error">No internet connection!</string>

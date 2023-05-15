@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), HomeView {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         presenter = HomePresenter(this)
 
         with(presenter) {
