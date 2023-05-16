@@ -88,6 +88,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_category"
                 tools:itemCount="1"
                 tools:listitem="@layout/item_category" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

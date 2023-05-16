@@ -12,47 +12,50 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import org.d3if3005.deliveryfood.R
-import org.d3if3005.recipeapp.data.model.UserData
+import org.d3if3005.deliveryfood.data.model.UserData
 
-class UserAdapter(val c:Context, val userList:ArrayList<UserData>) : RecyclerView.Adapter<UserAdapter.UserViewHolder> () {
+class UserAdapter(val c: Context, val userList: ArrayList<UserData>) :
+    RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     inner class UserViewHolder(val v: View) : RecyclerView.ViewHolder(v) {
 
-        var name:TextView
-        var mbNum:TextView
-        var moreMenu : ImageView
+        var name: TextView
+        var mbNum: TextView
+        var moreMenu: ImageView
+
         init {
             name = v.findViewById<TextView>(R.id.titleNewRecipe)
             mbNum = v.findViewById<TextView>(R.id.subTitleNewRecipe)
             moreMenu = v.findViewById(R.id.moreMenu)
-            moreMenu.setOnClickListener{popupMoreMenu(it)}
+            moreMenu.setOnClickListener { popupMoreMenu(it) }
         }
 
-        private fun popupMoreMenu(v:View){
+        private fun popupMoreMenu(v: View) {
             val position = userList[adapterPosition]
-            val popupMoreMenu = PopupMenu(c,v)
+            val popupMoreMenu = PopupMenu(c, v)
             popupMoreMenu.inflate(R.menu.show_menu)
             popupMoreMenu.setOnMenuItemClickListener {
-                when(it.itemId) {
+                when (it.itemId) {
                     R.id.editRecipe -> {
-                        val v = LayoutInflater.from(c).inflate(R.layout.activity_add_item_new_recipe, null)
+                        val v = LayoutInflater.from(c)
+                            .inflate(R.layout.activity_add_item_new_recipe, null)
                         val title = v.findViewById<EditText>(R.id.titleNewRecipe)
                         val instruction = v.findViewById<EditText>(R.id.instructionNewRecipe)
                         val ingredient = v.findViewById<EditText>(R.id.ingredientNewRecipe)
                         AlertDialog.Builder(c)
                             .setView(v)
-                            .setPositiveButton("Ok"){
-                                dialog, ->
+                            .setPositiveButton("Ok") { _, _ ->
                                 position.title = title.text.toString()
                                 position.instruction = instruction.text.toString()
                                 position.ingredient = ingredient.text.toString()
+
                                 notifyDataSetChanged()
                                 Toast.makeText(c, "New Recipe Edited", Toast.LENGTH_SHORT).show()
-                                dialog.dismiss()
+
+                                // Kodingan edit
                             }
-                            .setNegativeButton("Cancel"){
-                                dialog, ->
-                                dialog.dismiss()
+                            .setNegativeButton("Cancel") { _, _ ->
+                                // biarin
                             }
                             .create()
                             .show()
@@ -63,15 +66,13 @@ class UserAdapter(val c:Context, val userList:ArrayList<UserData>) : RecyclerVie
                             .setTitle("Delete")
                             .setIcon(R.drawable.ic_warning_sign)
                             .setMessage("Do You Want Delete This Recipe?")
-                            .setPositiveButton("Yes"){
-                                dialog,_->
+                            .setPositiveButton("Yes") { dialog, _ ->
                                 userList.removeAt(adapterPosition)
                                 notifyDataSetChanged()
                                 Toast.makeText(c, "Delete This Recipe", Toast.LENGTH_SHORT).show()
                                 dialog.dismiss()
                             }
-                            .setNegativeButton("No"){
-                                    dialog,_->
+                            .setNegativeButton("No") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -106,6 +107,5 @@ class UserAdapter(val c:Context, val userList:ArrayList<UserData>) : RecyclerVie
         val newList = userList[position]
         holder.name.text = newList.title
         holder.mbNum.text = newList.instruction
-        holder.text = newList.ingredient
     }
 }
