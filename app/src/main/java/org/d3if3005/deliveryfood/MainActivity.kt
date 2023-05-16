@@ -60,15 +60,6 @@ class MainActivity : AppCompatActivity(), HomeView {
         /**Set Dialog*/
         addsBtn.setOnClickListener { addInfo() }
 
-        /**Set Floating Button*/
-//        var i:Int = 0
-//        binding.floatingactionbutton.setOnClickListener{
-//            i++
-//            //header.text = i.toString();
-//            Log.d("Tombol Di Klik", "Tombol Berhasil")
-//        }
-
-
         presenter = HomePresenter(this)
 
         with(presenter) {
