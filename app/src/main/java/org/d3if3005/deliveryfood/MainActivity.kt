@@ -75,9 +75,8 @@ class MainActivity : AppCompatActivity(), HomeView {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
-            R.id.item1 -> Toast.makeText(this, "First Item Selected", Toast.LENGTH_SHORT).show()
-            R.id.item2 -> Toast.makeText(this, "Add New Recipe Selected", Toast.LENGTH_SHORT).show()
-            R.id.item3 -> Toast.makeText(this, "About Selected", Toast.LENGTH_SHORT).show()
+            R.id.item1 -> Toast.makeText(this, "Add New Recipe Selected", Toast.LENGTH_SHORT).show()
+            R.id.item2 -> Toast.makeText(this, "About Selected", Toast.LENGTH_SHORT).show()
         }
         return super.onOptionsItemSelected(item)
     }

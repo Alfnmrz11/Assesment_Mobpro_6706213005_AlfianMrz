@@ -3,15 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/item1"
-        android:icon="@drawable/ic_bluetooth"
-        android:title="Add New Recipe"
-        app:showAsAction = "ifRoom"/>
-
-    <item android:id="@+id/item2"
-        android:title="Add New Recipe"
+        android:title="History New Recipe"
         app:showAsAction = "never"/>
 
-    <item android:id="@+id/item3"
+    <item android:id="@+id/item2"
         android:title="About"
         app:showAsAction = "never"/>
 
