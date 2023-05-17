@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.EditText
 import android.widget.Toast
@@ -75,7 +74,7 @@ class MainActivity : AppCompatActivity(), HomeView {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
-            R.id.item1 -> Toast.makeText(this, "Add New Recipe Selected", Toast.LENGTH_SHORT).show()
+            R.id.item1 -> Toast.makeText(this, "History New Recipe Selected", Toast.LENGTH_SHORT).show()
             R.id.item2 -> Toast.makeText(this, "About Selected", Toast.LENGTH_SHORT).show()
         }
         return super.onOptionsItemSelected(item)
@@ -84,7 +83,7 @@ class MainActivity : AppCompatActivity(), HomeView {
     @SuppressLint("NotifyDataSetChanged")
     private fun addInfo(){
         val inflater = LayoutInflater.from(this)
-        val v = inflater.inflate(R.layout.activity_add_item_new_recipe, null)
+        val v = inflater.inflate(R.layout.fragment_add_item_new_recipe, null)
 
         /**Set View*/
         val titleNewRecipe = v.findViewById<EditText>(R.id.titleNewRecipe)

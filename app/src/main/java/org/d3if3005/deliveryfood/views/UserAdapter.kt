@@ -38,7 +38,7 @@ class UserAdapter(val c: Context, val userList: ArrayList<UserData>) :
                 when (it.itemId) {
                     R.id.editRecipe -> {
                         val v = LayoutInflater.from(c)
-                            .inflate(R.layout.activity_add_item_new_recipe, null)
+                            .inflate(R.layout.fragment_add_item_new_recipe, null)
                         val title = v.findViewById<EditText>(R.id.titleNewRecipe)
                         val instruction = v.findViewById<EditText>(R.id.instructionNewRecipe)
                         val ingredient = v.findViewById<EditText>(R.id.ingredientNewRecipe)
@@ -95,7 +95,7 @@ class UserAdapter(val c: Context, val userList: ArrayList<UserData>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val v = inflater.inflate(R.layout.list_item_new_recipe, parent, false)
+        val v = inflater.inflate(R.layout.fragment_list_item_new_recipe, parent, false)
         return UserViewHolder(v)
     }
 

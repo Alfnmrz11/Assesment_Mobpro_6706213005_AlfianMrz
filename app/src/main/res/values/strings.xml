@@ -21,4 +21,6 @@
     <!-- Button -->
     <string name="youtube">Youtube</string>
     <string name="source">Resource</string>
+
+    <string name="resep_makanan">Recipe Apps</string>
 </resources>
