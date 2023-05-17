@@ -13,6 +13,7 @@
         <action
             android:id="@+id/action_mainActivity_to_aboutActivity"
             app:destination="@id/aboutActivity" />
+
     </fragment>
     <fragment
         android:id="@+id/aboutActivity"
