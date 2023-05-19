@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity(), HomeView {
     private lateinit var userList:ArrayList<UserData>
     private lateinit var userAdapter: UserAdapter
 
+    private val viewModel: MainViewModel by lazy {
+        ViewModelProvider(this)[MainViewModel::class.java]
+    }
+
+
     companion object {
         const val EXTRA_CATEGORY = "category"
         const val EXTRA_POSITION = "position"
