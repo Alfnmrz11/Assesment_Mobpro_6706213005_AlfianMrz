@@ -10,5 +10,5 @@ interface RecipeDao {
     @Insert
     fun insert(bmi: RecipeEntity)
     @Query("SELECT * FROM newRecipe ORDER BY id DESC LIMIT 1")
-    fun getLastBmi(): LiveData<RecipeEntity?>
+    fun getLastRecipe(): LiveData<RecipeEntity?>
 }
