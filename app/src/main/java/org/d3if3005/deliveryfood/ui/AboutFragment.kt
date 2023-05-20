@@ -12,7 +12,7 @@ import org.d3if3005.deliveryfood.databinding.FragmentAboutBinding
 class AboutFragment : AppCompatActivity() {
     private lateinit var binding: FragmentAboutBinding
 
-    override fun onCreate(savedInstanceState) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = FragmentAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)

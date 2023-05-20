@@ -14,9 +14,6 @@
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".AboutActivity"
-            android:exported="false" />
-        <activity
             android:name=".views.category.CategoryActivity"
             android:exported="false" />
         <activity
@@ -33,6 +30,13 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.AboutFragment"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ui.NewRecipeFragment"
             android:exported="false"/>
     </application>
 

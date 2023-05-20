@@ -1,6 +1,7 @@
 package org.d3if3005.deliveryfood
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -18,6 +19,8 @@ import org.d3if3005.deliveryfood.data.local.Category
 import org.d3if3005.deliveryfood.data.local.Meal
 import org.d3if3005.deliveryfood.data.model.UserData
 import org.d3if3005.deliveryfood.databinding.ActivityMainBinding
+import org.d3if3005.deliveryfood.ui.AboutFragment
+import org.d3if3005.deliveryfood.ui.NewRecipeFragment
 import org.d3if3005.deliveryfood.utils.adapter.CategoryAdapter
 import org.d3if3005.deliveryfood.utils.adapter.MealAdapter
 import org.d3if3005.deliveryfood.utils.api.ApiUtils
@@ -71,19 +74,28 @@ class MainActivity : AppCompatActivity(), HomeView {
             getMeals()
             getCategories()
         }
+
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.another_menu, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId){
-            R.id.item1 -> Toast.makeText(this, "History New Recipe Selected", Toast.LENGTH_SHORT).show()
-            R.id.item2 -> Toast.makeText(this, "About Selected", Toast.LENGTH_SHORT).show()
+        when (item.itemId) {
+            R.id.item1 -> {
+                val intent = Intent(this, NewRecipeFragment::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.item2 -> {
+                this.startActivity(Intent(this,AboutFragment::class.java))
+                return true
+            }
+            // Add more cases for other menu items if needed
+            else -> return super.onOptionsItemSelected(item)
         }
-        return super.onOptionsItemSelected(item)
     }
 
     @SuppressLint("NotifyDataSetChanged")
