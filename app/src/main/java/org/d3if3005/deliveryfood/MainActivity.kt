@@ -99,36 +99,6 @@ class MainActivity : AppCompatActivity(), HomeView {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun addInfo(){
-        val inflater = LayoutInflater.from(this)
-        val v = inflater.inflate(R.layout.fragment_add_item_new_recipe, null)
-
-        /**Set View*/
-        val titleNewRecipe = v.findViewById<EditText>(R.id.titleNewRecipe)
-        val instructionNewRecipe = v.findViewById<EditText>(R.id.instructionNewRecipe)
-        val ingredientNewRecipe = v.findViewById<EditText>(R.id.ingredientNewRecipe)
-
-
-        val addDialog = AlertDialog.Builder(this)
-        addDialog.setView(v)
-        addDialog.setPositiveButton("Ok"){
-                dialog, _ ->
-            titleNewRecipe.text.toString()
-            instructionNewRecipe.text.toString()
-            ingredientNewRecipe.text.toString()
-            userList.add(UserData("Title : $titleNewRecipe", "Instruction : $instructionNewRecipe", "Ingredient : $ingredientNewRecipe"))
-            userAdapter.notifyDataSetChanged()
-            Toast.makeText(this, "Success Add New Recipe", Toast.LENGTH_SHORT).show()
-            dialog.dismiss()
-        }
-        addDialog.setNegativeButton("Cancel"){
-                dialog, _->
-            dialog.dismiss()
-            Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show()
-        }
-        addDialog.create()
-        addDialog.show()
-    }
 
     override fun setMeals(meals: ArrayList<Meal>) {
         val mealAdapter = MealAdapter(meals)
