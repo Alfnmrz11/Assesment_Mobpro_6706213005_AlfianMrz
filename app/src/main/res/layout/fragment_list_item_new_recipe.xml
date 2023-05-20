@@ -7,7 +7,8 @@
     app:cardCornerRadius="10dp"
     app1:cardElevation="8dp"
     app1:cardMaxElevation="4dp"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:id="@+id/newRecipeList">
 
     <LinearLayout
         android:orientation="horizontal"

@@ -13,10 +13,17 @@
         <action
             android:id="@+id/action_mainActivity_to_aboutFragment"
             app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_mainActivity_to_newRecipeList"
+            app:destination="@id/newRecipeList" />
 
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="org.d3if3005.deliveryfood.ui.AboutFragment"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/newRecipeList"
+        android:name="org.d3if3005.deliveryfood.ui.NewRecipeFragment"
+        tools:layout="@layout/fragment_list_item_new_recipe" />
 </navigation>
