@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/mainFragment">
 
     <fragment
-        android:id="@+id/mainActivity"
+        android:id="@+id/mainFragment"
         android:name="org.d3if3005.deliveryfood.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" >
         <action
-            android:id="@+id/action_mainActivity_to_aboutFragment"
+            android:id="@+id/action_mainFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
         <action
-            android:id="@+id/action_mainActivity_to_newRecipeList"
+            android:id="@+id/action_mainFragment_to_newRecipeList"
             app:destination="@id/newRecipeList" />
 
     </fragment>
