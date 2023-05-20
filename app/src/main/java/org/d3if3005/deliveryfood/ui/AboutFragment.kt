@@ -17,9 +17,4 @@ class AboutFragment : AppCompatActivity() {
         binding = FragmentAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
-
-    override fun onCreate(savedInstanceState) {
-        super.onCreate(savedInstanceState)
-        // Perform any additional setup or logic here
-    }
 }

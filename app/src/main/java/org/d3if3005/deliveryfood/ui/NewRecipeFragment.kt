@@ -11,11 +11,11 @@ import org.d3if3005.deliveryfood.databinding.FragmentNewRecipeBinding
 
 
 class NewRecipeFragment : AppCompatActivity() {
-    private lateinit var binding: FragmentAboutBinding
+    private lateinit var binding: FragmentNewRecipeBinding
 
     override fun onCreate(savedInstanceState) {
         super.onCreate(savedInstanceState)
-        binding = FragmentAboutBinding.inflate(layoutInflater)
+        binding = FragmentNewRecipeBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 }
