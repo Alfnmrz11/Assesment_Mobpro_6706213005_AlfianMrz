@@ -4,11 +4,19 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemacs.android.com/apk/res-auto"
     xmlns:app1="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="10dp"
     app1:cardElevation="8dp"
     app1:cardMaxElevation="4dp"
     android:layout_margin="10dp"
     android:id="@+id/newRecipeList">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/fragment_list_item_new_recipe" />
 
     <LinearLayout
         android:orientation="horizontal"

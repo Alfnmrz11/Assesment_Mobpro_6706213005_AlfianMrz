@@ -17,7 +17,6 @@ import org.d3if3005.deliveryfood.ui.factory.MainViewModelFactory
 
 class MainViewModel(private val db:RecipeDao) : ViewModel() {
     private val UserData = MutableLiveData<UserData?>()
-    val data = db.getLastRecipe()
 
     private val viewModel: MainViewModel by lazy {
         val db = RecipeDb.getInstance(requireContext())
@@ -39,10 +38,6 @@ class MainViewModel(private val db:RecipeDao) : ViewModel() {
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState:Bundle?){
-        viewModel.data.observe(viewLifecycleOwner, {
-            if (it == null) return@observe
-            Log.d("NewRecipe", "Data tersimpan. ID = ${it.id}")
-        })
+    fun onViewCreated(view: View, savedInstanceState:Bundle?){
     }
 }

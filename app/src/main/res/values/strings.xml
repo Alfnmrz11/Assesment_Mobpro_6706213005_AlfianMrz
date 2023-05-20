@@ -24,4 +24,7 @@
 
     <string name="resep_makanan">Recipe Apps</string>
 
+    <string name="historyNewRecipe">History New Recipe</string>
+    <string name="aboutDeveloper">About Developer</string>
+
 </resources>

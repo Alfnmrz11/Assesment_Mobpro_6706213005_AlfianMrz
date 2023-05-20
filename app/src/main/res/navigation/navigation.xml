@@ -21,9 +21,11 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="org.d3if3005.deliveryfood.ui.AboutFragment"
+        android:label="@string/aboutDeveloper"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/newRecipeList"
-        android:name="org.d3if3005.deliveryfood.ui.NewRecipeFragment"
+        android:name="org.d3if3005.deliveryfood.ui.HistoryRecipeFragment"
+        android:label="@string/historyNewRecipe"
         tools:layout="@layout/fragment_list_item_new_recipe" />
 </navigation>

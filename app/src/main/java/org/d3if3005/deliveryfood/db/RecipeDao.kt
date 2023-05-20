@@ -9,6 +9,6 @@ import androidx.room.Query
 interface RecipeDao {
     @Insert
     fun insert(bmi: RecipeEntity)
-    @Query("SELECT * FROM newRecipe ORDER BY id DESC LIMIT 1")
-    fun getLastRecipe(): LiveData<RecipeEntity?>
+    @Query("SELECT * FROM newRecipe ORDER BY id DESC")
+    fun getLastRecipe(): LiveData<List<RecipeEntity>>
 }
