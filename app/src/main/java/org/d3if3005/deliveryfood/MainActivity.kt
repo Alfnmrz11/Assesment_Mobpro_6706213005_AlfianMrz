@@ -20,7 +20,7 @@ import org.d3if3005.deliveryfood.data.local.Meal
 import org.d3if3005.deliveryfood.data.model.UserData
 import org.d3if3005.deliveryfood.databinding.ActivityMainBinding
 import org.d3if3005.deliveryfood.ui.AboutFragment
-import org.d3if3005.deliveryfood.ui.HistoryRecipeFragment
+//import org.d3if3005.deliveryfood.ui.HistoryRecipeFragment
 import org.d3if3005.deliveryfood.utils.adapter.CategoryAdapter
 import org.d3if3005.deliveryfood.utils.adapter.MealAdapter
 import org.d3if3005.deliveryfood.utils.api.ApiUtils
@@ -84,11 +84,11 @@ class MainActivity : AppCompatActivity(), HomeView {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.item1 -> {
-                val intent = Intent(this, HistoryRecipeFragment::class.java)
-                startActivity(intent)
-                return true
-            }
+//            R.id.item1 -> {
+//                val intent = Intent(this, HistoryRecipeFragment::class.java)
+//                startActivity(intent)
+//                return true
+//            }
             R.id.item2 -> {
                 this.startActivity(Intent(this,AboutFragment::class.java))
                 return true
