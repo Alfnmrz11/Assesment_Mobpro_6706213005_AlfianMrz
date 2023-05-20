@@ -18,11 +18,6 @@ import org.d3if3005.deliveryfood.ui.factory.MainViewModelFactory
 class MainViewModel(private val db:RecipeDao) : ViewModel() {
     private val UserData = MutableLiveData<UserData?>()
 
-    private val viewModel: MainViewModel by lazy {
-        val db = RecipeDb.getInstance(requireContext())
-        val factory = MainViewModelFactory(db.dao)
-        ViewModelProvider(this, factory)[MainViewModel::class.java]
-    }
     fun newRecipe(title: String, intruction: String, ingredient: String): MutableLiveData<UserData?> {
         return UserData
 
